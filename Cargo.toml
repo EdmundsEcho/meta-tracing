@@ -1,10 +1,18 @@
 [package]
-name = "synapse-meta-tracing"
-description = "Flexible metadata collection for ETL processing"
+name = "meta-tracing"
+description = "Flexible metadata collection layered on top of the tracing crate. Accumulate structured sections, timings, and issues during processing and emit them as JSON alongside the usual tracing spans."
 version = "0.1.0"
 edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/EdmundsEcho/meta-tracing"
+homepage = "https://github.com/EdmundsEcho/meta-tracing"
+documentation = "https://docs.rs/meta-tracing"
+readme = "README.md"
+keywords = ["tracing", "metadata", "observability", "telemetry", "etl"]
+categories = ["development-tools::debugging", "data-structures"]
+authors = ["Edmund Cape"]
 
 [dependencies]
-serde = {workspace = true, features = ["derive"]}
-serde_json = {workspace = true}
-tracing = {workspace = true}
+serde      = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing    = "0.1"
